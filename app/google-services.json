@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "934390388045",
+    "project_id": "chatbox-e7f0e",
+    "storage_bucket": "chatbox-e7f0e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934390388045:android:6ea66f6ec3b1a624a61304",
+        "android_client_info": {
+          "package_name": "com.example.dulich"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934390388045-6spip4s93pe095lg9ahhpn3rtdvlggl6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dulich",
+            "certificate_hash": "fb0a333a5c5dd8efc219be80faeb021a39547eb6"
+          }
+        },
+        {
+          "client_id": "934390388045-an4i2kh1aj7on6r1galcghhq2jset2u4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7QCkz72q5ksTazC2CGAv1MsoM7LzXYpk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934390388045-an4i2kh1aj7on6r1galcghhq2jset2u4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

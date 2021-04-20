@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Login"
+        android:textColor="@color/black"
+        android:textSize="25sp"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/emailTLL">
+
+        <EditText
+            android:id="@+id/emailETS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Nhập Email"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    //Pass word
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/passwordTLL"
+        android:layout_below="@id/emailTLL"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/passwordETS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Nhập Mật Khẩu"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_loginS"
+        android:text="Login"
+        android:layout_below="@id/passwordTLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/recoverPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Ban quen mat khau?"
+        android:layout_below="@id/btn_loginS"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        />
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/googleLoginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/recoverPass">
+    </com.google.android.gms.common.SignInButton>
+    <TextView
+        android:id="@+id/nothave_accountTVS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Khong Co tai khoang? Dang ky"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"/>
+    
+</RelativeLayout>
