@@ -75,6 +75,7 @@ public class RegisterActivity2 extends AppCompatActivity {
 
             }
         });
+        //Chuyển sang trang login
          notHaveAcctTV.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
@@ -104,6 +105,7 @@ public class RegisterActivity2 extends AppCompatActivity {
                             hashMap.put("name","");//will add late (e.g edit profile)
                             hashMap.put("phone","");
                             hashMap.put("image","");
+                            hashMap.put("cover","");
                             //forebase database istance
                             FirebaseDatabase database = FirebaseDatabase.getInstance();
                             //path to store user date name"Users"

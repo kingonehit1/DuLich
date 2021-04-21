@@ -3,6 +3,9 @@
     package="com.example.dulich">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    //Sử dụng camera của máy
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"

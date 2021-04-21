@@ -211,6 +211,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+//Quay lại
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
@@ -240,11 +241,11 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
+                            // Đăng nhập thành công, cập nhật giao diện người dùng với thông tin của người dùng đã đăng nhập
                             FirebaseUser user = mAuth.getCurrentUser();
 
                             if(task.getResult().getAdditionalUserInfo().isNewUser()){
-                                //Get user email add uid from auth
+                                //Nhận email của người dùng thêm uid từ auth
                                 String email = user.getEmail();
                                 String uid = user.getUid();
 
@@ -256,9 +257,10 @@ public class LoginActivity extends AppCompatActivity {
                                 hashMap.put("name","");//will add late (e.g edit profile)
                                 hashMap.put("phone","");
                                 hashMap.put("image","");
+                                hashMap.put("cover","");
                                 //forebase database istance
                                 FirebaseDatabase database = FirebaseDatabase.getInstance();
-                                //path to store user date name"Users"
+                                //Đường dẫn lưu trữ tên Users
                                 DatabaseReference reference = database.getReference("Users");
                                 //put data within hashmap in database
                                 reference.child(uid).setValue(hashMap);
@@ -269,8 +271,8 @@ public class LoginActivity extends AppCompatActivity {
                             finish();
                             //updateUI(user);
                         } else {
-                            // If sign in fails, display a message to the user.
-                            Toast.makeText(LoginActivity.this,"Dang Nhap that bai",Toast.LENGTH_SHORT).show();
+                            // Nếu đăng nhập không thành công, hiển thị thông báo cho người dùng.
+                            Toast.makeText(LoginActivity.this,"Đăng nhập thất bại",Toast.LENGTH_SHORT).show();
                             //updateUI(null);
                         }
                     }
